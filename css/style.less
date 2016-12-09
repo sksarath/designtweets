@@ -1,0 +1,320 @@
+/* Color variables*/
+/*common */
+@white: #FFFFFF;
+@black: #000000;
+@slider-indicator: #eee;
+@slider-indicator-active: #777;
+*
+{
+	box-sizing: border-box;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	font-family: 'Gentona';
+}
+.hide
+{
+	display: none !important;
+}
+.wd_100
+{
+	float: left;
+	width: 100%;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+header
+{
+	width: 100%;
+	float: left;
+	background: #FFF;
+	box-shadow: 0 2px 2px #eee;
+}
+.logo
+{
+	padding: 15px 20px;
+	img
+	{
+		max-width: 100%;
+		height: 42px;
+	}
+}
+.main_container
+{
+	width: 100%;
+	float: left;
+	padding: 2% 1%;
+	background: #f6f9fc;
+	h1
+	{
+		width: 100%;
+		text-align: center;
+		float: left;
+		margin: 0 0 0 0;
+		font-family: 'Roboto Slab';
+		font-weight: 500;
+		font-size: 22px;
+		letter-spacing: 0.3px;
+	}
+	.grid
+	{
+		display: flex;
+		flex-wrap:wrap;
+		flex-direction: column;
+		width: 100%;
+		height: 1800px;
+	}
+	.twitter_container
+	{
+		width: 23%;
+		float: left;
+		background: #FFF;
+		margin-right: 1%;
+		margin-left: 1%;
+		margin-top: 2%;
+		border-radius: 3px;
+		box-shadow: 0 0 5px rgba(0,0,0,0.1); 
+		transition: all 300ms ease;
+
+		&:hover
+		{
+			box-shadow: 0 13px 20px 3px rgba(0,0,0,0.125);
+			transform: translateY(-5px);
+		}
+		.twitter-tweet
+		{
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+	}
+}
+@supports not (flex-wrap: wrap) {
+	div .grid {
+		display: block;
+	}
+	div .grid .twitter_container { 
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	div .grid { height: 200vw; }
+	div .grid .twitter_container { width: 50%; }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px)
+{
+	
+}
+@media only screen and (max-width: 768px) 
+{
+	.hidden_xs
+	{
+		display: none !important;
+	}
+	.slick-dots
+	{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		padding-top: 15px;
+		li
+		{
+			display: inline-block;
+			background: @slider-indicator;
+    		color: #000;
+   		 	width: 8px;
+    		height: 8px;
+    		border-radius: 10px;
+    		margin: 0 6px;
+    		cursor: pointer;
+    		button
+    		{
+    			display: none;
+    		}
+		}
+		.slick-active
+		{
+			background: @slider-indicator-active;
+		}
+	}
+	.slick-prev
+	{
+		position: absolute;
+		left: 0;
+		font-size: 0;
+		z-index: 2;
+		cursor: pointer;
+		top: 50%;
+		border: 1px solid rgba(255,255,255,0);
+		width: 28px;
+		height: 28px; 
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+  		-moz-transform: translateY(-50%);
+  		-ms-transform: translateY(-50%);
+  		-o-transform: translateY(-50%);
+		background: url('../img/arrowhead-left.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		&:focus
+		{
+			outline: none;
+		}
+	}
+	.slick-next
+	{
+		position: absolute;
+		right: 0;
+		font-size: 0;
+		z-index: 2;
+		cursor: pointer;
+		top: 50%;
+		border: 1px solid rgba(255,255,255,0);
+		width: 28px;
+		height: 28px;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		background: url('../img/arrowhead-right.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		&:focus
+		{
+			outline: none;
+		}
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1100px)
+{
+
+}
+@media only screen and (min-width: 1101px) and (max-width: 1180px)
+{
+
+}
+@media only screen and (min-width: 769px) and (max-width: 992px)
+{
+	.slick-dots
+	{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		padding-top: 15px;
+		li
+		{
+			display: inline-block;
+			background: @slider-indicator;
+    		color: #000;
+   		 	width: 8px;
+    		height: 8px;
+    		border-radius: 10px;
+    		margin: 0 6px;
+    		cursor: pointer;
+    		button
+    		{
+    			display: none;
+    		}
+		}
+		.slick-active
+		{
+			background: @slider-indicator-active;
+		}
+	}
+	.slick-prev
+	{
+		position: absolute;
+		left: 0;
+		font-size: 0;
+		z-index: 2;
+		cursor: pointer;
+		top: 50%;
+		border: 1px solid rgba(255,255,255,0);
+		width: 28px;
+		height: 28px; 
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+  		-moz-transform: translateY(-50%);
+  		-ms-transform: translateY(-50%);
+  		-o-transform: translateY(-50%);
+		background: url('../img/arrowhead-left.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		&:focus
+		{
+			outline: none;
+		}
+	}
+	.slick-next
+	{
+		position: absolute;
+		right: 0;
+		font-size: 0;
+		z-index: 2;
+		cursor: pointer;
+		top: 50%;
+		border: 1px solid rgba(255,255,255,0);
+		width: 28px;
+		height: 28px;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		background: url('../img/arrowhead-right.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		&:focus
+		{
+			outline: none;
+		}
+	}
+}
+@media only screen and (min-width: 993px) and (max-width: 1300px)
+{
+
+}
+@media only screen and (min-width: 1201px) and (max-width: 1400px)
+{
+	
+}
+@media only screen and (min-width: 1441px)
+{
+
+}
+
+/*keyframes*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
